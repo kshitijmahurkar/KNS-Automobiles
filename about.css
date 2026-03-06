@@ -1,0 +1,210 @@
+/* BASE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(https://images.hdqwalls.com/download/2018-bugatti-divo-rear-view-ex-3840x2400.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    background-color: #000;
+    color: #e7e7e7;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #a7a7a7;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.btn-signing {
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-signing:hover {
+    background-color: cyan;
+}
+
+/* INTRO SECTION */
+.intro {
+    padding-top: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tag-box {
+    width: 16rem;
+    height: 2.5rem;
+    margin: 0 auto 1.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag {
+    background-color: black;
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+    color: #e7e7e7;
+    font-weight: 500;
+    cursor: default;
+}
+
+
+.intro h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+}
+
+.description {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, black);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+/* TEAM SECTION */
+.team {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.member-card {
+    background: rgba(255, 255, 255, black);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.member-card p {
+    color: #cfcfcf;
+    font-size: 1rem;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #e7e7e7;
+    padding: 0.75rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #222;
+    color: cyan;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
